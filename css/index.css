@@ -57,7 +57,10 @@ table{
     table-layout: fixed;
 
 }
-
+.fadeOut{
+	opacity: 0;
+	transition: 1s;
+}
 td, th {
 	padding: .7em;
 	margin: 0;
