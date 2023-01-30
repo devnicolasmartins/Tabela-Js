@@ -50,7 +50,11 @@ section h2{
 	border-bottom: 1px solid #ccc;
 	margin-bottom: .5em;
 }
-
+.buscar-paciente{
+	padding: 10px;
+    margin: 0px 0 10px 0;
+    width: 100%;
+}
 table{
 	width: 100%;
 	margin-bottom : .5em;
@@ -139,4 +143,8 @@ button[disabled=disabled], button:disabled {
 
 .campo-invalido{
 	border: 1px solid red;
+}
+
+.invisivel{
+	display: none;
 }
