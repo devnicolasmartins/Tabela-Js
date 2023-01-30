@@ -4,7 +4,7 @@ addPaciente.addEventListener("click", consulta)
 function consulta(){
     var vazio = document.getElementById("vazio");
     var busca = new XMLHttpRequest()
-    busca.open("GET", "https://api-pacientes.herokuapp.com/pacientes");
+    busca.open("GET", "https://raw.githubusercontent.com/loresgarcia/Pacientes-API/master/pacientes.json");
     busca.addEventListener("load", function(){
         if(busca.status = 200){
             vazio.style.display = "none";
