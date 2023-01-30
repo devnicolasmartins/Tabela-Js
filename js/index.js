@@ -20,6 +20,7 @@ function geral(event){
     validaGordura(paciente);
     validaPaciente(paciente);
 }
+
 document.getElementById("adicionar-paciente").addEventListener("click", geral);
 
 function obtemPaciente(form){
@@ -102,8 +103,8 @@ function validaGordura(paciente){
     }
 }
 function validaPaciente(paciente){
+    var pacienteTr= criaTr(paciente);
     if(validaAltura(paciente) != erro){
-        var pacienteTr= criaTr(paciente);
         if(validaPeso(paciente) != erro){
             if(validaNome(paciente) != erro){
                 if(validaGordura(paciente) != erro){
