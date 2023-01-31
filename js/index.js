@@ -128,6 +128,7 @@ function criaImg(){
     img.setAttribute("onClick", "removerElemento");
     img.setAttribute("class", "remover-paciente");
     img.setAttribute("src","img/x.png");
+    img.setAttribute("title","Remover Paciente");
     tdImg = document.createElement("td")
     tdImg.classList.add("x")
     tdImg.appendChild(img);
