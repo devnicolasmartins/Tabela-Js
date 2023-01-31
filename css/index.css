@@ -55,11 +55,10 @@ section h2{
     margin: 0px 0 10px 0;
     width: 100%;
 }
-table{
-	width: 100%;
+.tabela{
+	width: 120%;
 	margin-bottom : .5em;
     table-layout: fixed;
-
 }
 .fadeOut{
 	opacity: 0;
@@ -75,6 +74,18 @@ td, th {
 th{
 	font-weight: bold;
 	background-color: #EEE;
+}
+
+.x{
+	border: none;
+}
+
+.remover-paciente{
+	width: 12px;
+    height: 12px;
+    display: flex;
+	position: absolute;
+	cursor: pointer;
 }
 
 label{

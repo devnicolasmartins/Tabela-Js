@@ -1,6 +1,9 @@
 var pacientes = document.querySelectorAll(".paciente");
 var form= document.querySelector("#form-adiciona");
 var erro = "Valor inválido! Insira um valor real.";
+var img;
+var tdImg;
+
 function calculaImc(peso, altura){
     var imc = peso / (altura * altura);
     return imc.toFixed(2);
@@ -13,7 +16,6 @@ for(i = 0; i < pacientes.length; i++){
 function geral(event){
     event.preventDefault();
     var paciente= obtemPaciente(form);
-
     validaAltura(paciente);
     validaPeso(paciente);
     validaNome(paciente);
@@ -37,13 +39,15 @@ function obtemPaciente(form){
 function criaTr(paciente){
     var pacienteTr= document.createElement("tr");
     pacienteTr.classList.add("paciente");
-
     pacienteTr.appendChild(criaTd(paciente.nome, "info-nome"));
     pacienteTr.appendChild(criaTd(paciente.peso, "info-peso"));
     pacienteTr.appendChild(criaTd(paciente.altura, "info-altura"));
     pacienteTr.appendChild(criaTd(paciente.gordura, "info-gordura"));
     pacienteTr.appendChild(criaTd(paciente.imc, "info-imc"));
 
+    criaImg();
+    pacienteTr.appendChild(tdImg);
+    
     return pacienteTr;
 }
 function criaTd(dado, classe){
@@ -118,3 +122,14 @@ function validaPaciente(paciente){
     }
     }
 }
+
+function criaImg(){
+    img = document.createElement("img");
+    img.setAttribute("onClick", "removerElemento");
+    img.setAttribute("class", "remover-paciente");
+    img.setAttribute("src","img/x.png");
+    tdImg = document.createElement("td")
+    tdImg.classList.add("x")
+    tdImg.appendChild(img);
+}
+

@@ -1,6 +1,7 @@
-document.querySelector("#tabela-pacientes").addEventListener("dblclick", function(event){
-    event.target.parentNode.classList.add("fadeOut");
+document.querySelector("#tabela-pacientes").addEventListener("click", removerElemento);
+function removerElemento(event){
+    event.target.closest("tr").classList.add("fadeOut");
     setTimeout(function(){
-        event.target.parentNode.remove();        
+        event.target.closest("tr").remove();        
     }, 1000);
-});
+};
