@@ -16,3 +16,4 @@ Funções:
 2- Valor inválido: Caso o valor inserido no formulário de adição de pacientes seja inválido (baseado nas condições reais estabelecidas de cada campo), será exibida uma mensagem de erro abaixo do campo em que o valor inválido estiver inserido, não sendo possível adicionar o paciente à tabela até que o valor seja corrigido e, quando a correção acontecer, a mensagem de erro irá desaparecer.<br>
 <br>
 Acesse em: https://aparecidanutricionista.vercel.app/
+ 
